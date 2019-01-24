@@ -1,0 +1,20 @@
+CreateIndex:	index.c marclib.o crindlb.o indlib.o cgi.o getprm.o cfg.o
+		cc -o CreateIndex index.c crindlb.c marclib.o indlib.o cgi.o getprm.o cfg.o
+
+crindlb.o:	crindlb.c crindlb.h crindlb_.h
+		cc -c crindlb.c
+
+cgi.o:		cgi.c cgi.h html.h cgitbl.h
+		cc -c cgi.c
+
+indlib.o:	indlib.c indlib.h indlib_.h
+		cc -c indlib.c
+
+marclib.o:	marclib.c marclib_.h marclib.h
+		cc -c marclib.c
+		
+getprm.o:	getprm.c getprm_.h getprm.h
+		cc -c getprm.c	
+		
+cfg.o:		cfg.c cfg.h cfg_.h
+		cc -c cfg.c
